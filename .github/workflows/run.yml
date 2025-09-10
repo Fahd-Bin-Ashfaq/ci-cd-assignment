@@ -9,6 +9,12 @@ jobs:
     - name: check
       uses: actions/checkout@v2
 
+    - name: Make run.sh executable
+      run: chmod +x run.sh
+
+    - name: Run Script
+      run: ./run.sh  
+
     - name: run Script
       uses: bash run.sh
 
