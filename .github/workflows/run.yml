@@ -1,0 +1,15 @@
+name: Assignment
+on: push
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: check
+      uses: actions/checkout@v2
+
+    - name: run Script
+      uses: bash run.sh
+
+
