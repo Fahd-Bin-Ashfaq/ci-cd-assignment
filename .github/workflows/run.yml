@@ -1,21 +1,17 @@
-name: Assignment
-on: push
+name: Run Script
+
+on: [push]
 
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: check
-      uses: actions/checkout@v2
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
-    - name: Make run.sh executable
-      run: chmod +x run.sh
+      - name: Make run.sh executable
+        run: chmod +x run.sh
 
-    - name: Run Script
-      run: ./run.sh  
-
-    - name: run Script
-      uses: bash run.sh
-
-
+      - name: Run Script
+        run: ./run.sh
